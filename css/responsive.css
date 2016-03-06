@@ -1,0 +1,104 @@
+@media screen and (min-width:480px) {
+  
+  #content-wrapper {
+    padding-bottom: 77px;
+  }
+
+  /*===============================================
+  TWO COLUMN LAYOUT
+  ===============================================*/
+  
+  #primary {
+    width: 50%;
+    float: left;
+  }
+  
+  #secondary{
+    width: 40%;
+    float: right;
+  }
+
+  
+  
+  /*===============================================
+  Footer
+  ===============================================*/
+  
+  footer {
+    height: 47px;
+    margin-top: -77px;
+  }
+
+  .copyright {
+  	float: left;
+  	margin: 16px 0 16px 5%;
+  }
+
+  .social-icons {
+  	float: right;
+  	margin-right: 5%;
+  }
+
+  
+  
+  /*===============================================
+  PAGE: ABOUT
+  ===============================================*/
+  
+  .profile-photo {
+    float: left;
+    margin: 0 5% 80px 0;
+  }
+  
+}
+
+@media screen and (min-width: 660px) {
+
+  /*===============================================
+  HEADER
+  ===============================================*/
+  
+  header {
+    border-bottom: 5px solid #ecf0f1;
+    margin-bottom: 60px;
+  }
+
+  #logo {
+    float: left;
+    margin-left: 5%;
+    text-align: left;
+    width: 45%;
+  }
+
+  nav {
+    background: none;
+    float: right;
+    font-size: 1.125em;
+    margin: 0px 5% 0 0;
+    text-align: right;
+    width: 45%;
+  }
+
+  nav a {
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+    line-height: 75px;
+
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 0.825em;
+    margin-bottom: 20px;
+  }
+
+  
+}
