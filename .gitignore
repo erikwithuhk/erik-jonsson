@@ -38,7 +38,7 @@ Thumbs.db
 
 # Images #
 ######################
-.png
-.jpg
-.gif
-.ico
+*.png
+*.jpg
+*.gif
+*.ico
