@@ -36,17 +36,16 @@
 					<h1>Let's play hangman!</h1>
           <div style="width:50%; float:left;">
             <p class="prompt"></p>
-            <input maxlength="1" autofocus></input>
-            <button class="guess">Guess</button>
+            <input maxlength="1" autofocus onfocus="clearField(this);"></input>
+            <button class="guess">Guess</button><button class="reset"></button>
 						<p class="validation"></p>
+						<p class="win"></p>
           </div>
           <div style="width:50%; float:left;">
 						<p class="gallows"></p>
             <p class="word-to-guess"></p>
-						<p class="win"></p>
 						<p class="wrong-letters"></p>
-						<p class="wrong-guesses"></p>
-						<button class="reset"></button
+						<div id="hangman"></div>
           </div>
 				</section>
 			</div>

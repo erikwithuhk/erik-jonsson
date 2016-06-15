@@ -33,7 +33,7 @@ body {
 
 #content-wrapper {
   max-width: 940px;
-  margin: 0 auto;
+  margin: 0 auto 2em;
   padding: 0 5%;
   padding-bottom: 97px;
 }
@@ -211,6 +211,15 @@ Page: Contact
 /***=======================
 Page: Hangman
 =======================***/
+#hangman {
+  max-height: 250px;
+  max-width: 250px;
+}
+
+input, .guess {
+  margin-right: 0.5em;
+}
+
 .validation {
   margin-top: 1em;
 }

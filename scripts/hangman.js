@@ -110,6 +110,21 @@ for(var letter in letters) {
 var wrongLetters = [];
 var wrongGuesses = 0;
 
+var checkLetter = function(guessedLetter) {
+  hasLetter(letters, guessedLetter);
+  for(var i in letters) {
+    if(guessedLetter === letters[i]) {
+      guessedLetters[i] = letters[i];
+    }
+  }
+  $('.word-to-guess').html(guessedLetters.join(' '));
+  over();
+};
+
+function clearField(input) {
+    input.value = "";
+};
+
 var countLetters = function(guessedLetter) {
   var count = 0;
   for(var i in letters) {
@@ -118,6 +133,28 @@ var countLetters = function(guessedLetter) {
     }
   }
   return count;
+};
+
+var drawHangman = function() {
+  if (wrongGuesses === 1) {
+    $('#hangman').html('<img src="img/hangman_1.png">');
+  } else if (wrongGuesses === 2) {
+    $('#hangman').html('<img src="img/hangman_2.png">');
+  } else if (wrongGuesses === 3) {
+    $('#hangman').html('<img src="img/hangman_3.png">');
+  } else if (wrongGuesses === 4) {
+    $('#hangman').html('<img src="img/hangman_4.png">');
+  } else if (wrongGuesses === 5) {
+    $('#hangman').html('<img src="img/hangman_5.png">');
+  } else if (wrongGuesses === 6) {
+    $('#hangman').html('<img src="img/hangman_6.png">');
+  } else if (wrongGuesses === 7) {
+    $('#hangman').html('<img src="img/hangman_7.png">');
+  } else if (wrongGuesses === 8) {
+    $('#hangman').html('<img src="img/hangman_8.png">');
+  } else if (wrongGuesses === 9) {
+    $('#hangman').html('<img src="img/hangman_9.png">');
+  }
 };
 
 var hasLetter = function(array, guessedLetter) {
@@ -137,19 +174,7 @@ var pushWrongLetter = function(letter) {
   wrongLetters.push(letter);
   $('.wrong-letters').html('Already guessed: ' + wrongLetters.sort().join(' '));
   wrongGuesses += 1;
-  $('.wrong-guesses').html(wrongGuesses);
-  // drawHangman();
-};
-
-var checkLetter = function(guessedLetter) {
-	hasLetter(letters, guessedLetter);
-	for(var i in letters) {
-		if(guessedLetter === letters[i]) {
-			guessedLetters[i] = letters[i];
-		}
-	}
-	$('.word-to-guess').html(guessedLetters.join(' '));
-  over();
+  drawHangman();
 };
 
 var over = function() {
@@ -160,6 +185,13 @@ var over = function() {
 		$('.win').html('Congratulations, you won!');
     $('.reset').html('Play again');
 		return true;
+  } else if (wrongGuesses === 9) {
+    $('.prompt').hide();
+    $('input').hide();
+    $('.guess').hide();
+    $('.win').html('You lost, try again!');
+    $('.reset').html('Play again');
+    return true;
 	} else {
 		return false;
 	}
@@ -188,27 +220,16 @@ var reset = function() {
   $('input').show();
   $('.guess').show();
   $('.gallows').html('');
+  $('#hangman').html('');
+  $('.reset').html('Reset');
+  $(function() {
+    $("input").focus();
+  });
 }
-
-var drawHangman = function() {
-  if(wrongGuesses === 1) {
-    $('.gallows').html('_____');
-  } else if(wrongGuesses === 2) {
-    $('.gallows').html('&nbsp;&nbsp;|<br>&nbsp;&nbsp;|<br>&nbsp;&nbsp;|<br>&nbsp;&nbsp;|<br>&nbsp;&nbsp;|<br>__|__');
-  }
-};
-//   ________
-//   |      |
-//   |      O
-//   |     \|/
-//   |      |
-//   |     / \
-// __|__
 
 $('.guess').click(function() {
   var guess = $('input').val();
   checkLetter(guess.toUpperCase());
-  $('input').val('');
   $(function() {
     $("input").focus();
   });
@@ -218,7 +239,9 @@ $('input').keypress(function (e) {
   if (e.which == 13) {
     var guess = $('input').val();
     checkLetter(guess.toUpperCase());
-    $('input').val('');
+    $(function() {
+      $("input").focus();
+    });
   }
 });
 
