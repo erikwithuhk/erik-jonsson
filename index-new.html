@@ -9,67 +9,108 @@
 		<link rel="stylesheet" href="css/main-new.css">
 	</head>
 	<body>
-    <nav class="navbar navbar-fixed-top" id="top_nav">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Erik J<span class="red">ö</span>nsson</a>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top" id="top_nav">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Erik J<span class="red">ö</span>nsson</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#about">About<i class="fa fa-child" aria-hidden="true"></i></a></li>
+              <li><a href="#work">Work<i class="fa fa-cogs" aria-hidden="true"></i></a></li>
+              <li><a href="#contact">Contact<i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+
+    <section id="main">
+
+      <article id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-5 col-md-offset-1">
+            <h2 style="font-size: 32px; font-weight: bold;">I'm a front-end web developer and digital communications consultant.</h2>
+            <p>I do a whole bunch of stuff, lorem ipsum...</p>
+          </div>
+            <div class="col-xs-4 col-xs-offset-4 col-md-4 col-md-offset-1">
+              <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/1901386_10202249953355090_4598247936427750485_n.jpg?oh=92a25442a350e8411b07f2b73a13c0f4&oe=57DA0248"
+              class="img-responsive">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 text-center">
+              <p><a href="#work">See my work<br>
+                <span class="fa-stack fa-1x">
+                  <i class="fa fa-circle-o fa-stack-2x"></i>
+                  <i class="fa fa-angle-down fa-stack-1x"></i>
+                </span></a></p>
+            </div>
+          </div>
         </div>
+      </article>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#about"><span class="glyphicon glyphicon-user"></span> About</a></li>
-            <li><a href="#portfolio"><span class="glyphicon glyphicon-briefcase"></span>Portfolio</a></li>
-            <li><a href="#contact"><span class="glyphicon glyphicon-envelope"></span>Contact</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
+      <article id="work">
+        <div class="container">
+          <h2>Recent work</h2>
+          <div class="row clearfix">
+            <div class="col-xs-6 col-md-3">
+              <div class="thumbnail">
+                <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/1901386_10202249953355090_4598247936427750485_n.jpg?oh=92a25442a350e8411b07f2b73a13c0f4&oe=57DA0248" class="img-responsive">
+                <div class="caption">
+                  <h4>Hangman</h4>
+                  <p>HTML, CSS, JavaScript, jQuery</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="thumbnail">
+                <img src="http://www.adhamdannaway.com/wp-content/uploads/2012/06/feature-freelancer.jpg" class="img-responsive">
+                <div class="caption">
+                  <h4>Hangman</h4>
+                  <p>HTML, CSS, JavaScript, jQuery</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="thumbnail">
+                <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/1901386_10202249953355090_4598247936427750485_n.jpg?oh=92a25442a350e8411b07f2b73a13c0f4&oe=57DA0248" class="img-responsive">
+                <div class="caption">
+                  <h4>Hangman</h4>
+                  <p>HTML, CSS, JavaScript, jQuery</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-2 col-md-offset-1" id="more_work">
+              <a href="#" class="btn btn-white" role="button">See more work <i class="fa fa-angle-double-right"></i></a>
+            </div>
+          <div>
+        </div>
+      </article>
 
-    <div class="jumbotron" id="about">
-      <div class="container">
-      <h1>About</h1>
-      <p>...</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">See my work</a></p>
-      </div>
-    </div>
-
-    <div class="jumbotron" id="portfolio">
-      <div class="container">
-      <h1>Portfolio</h1>
-      <p>...</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">See my work</a></p>
-      </div>
-    </div>
-
-    <div class="jumbotron" id="contact">
-      <div class="container">
-      <h1>Contact</h1>
-      <p>...</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">See my work</a></p>
-      </div>
-    </div>
-
-    <section>
-      <div class="container">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nibh risus, convallis sed luctus non, scelerisque quis urna. Praesent in lorem vel mi tempor laoreet. Cras in vestibulum est. Nam tristique bibendum facilisis. Vivamus a euismod justo, eu lobortis tellus. Integer lobortis, quam vel viverra ullamcorper, dui odio vehicula velit, id malesuada felis risus sed magna. Suspendisse ullamcorper urna sit amet interdum cursus. Morbi luctus, metus non placerat aliquet, nulla massa condimentum sem, vitae molestie eros velit vitae nulla. Ut tincidunt ante a porta convallis. Sed quis varius turpis, in ultrices neque. Etiam volutpat augue vitae lectus blandit, sit amet congue erat rhoncus. Donec nec elementum dui. Phasellus ac arcu bibendum, ornare velit eget, cursus elit. Sed eget semper sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-
-    <p>Donec et commodo diam. Ut lorem metus, lacinia eget tincidunt ac, condimentum nec erat. Nam luctus facilisis diam ac facilisis. Cras vel magna ipsum. Fusce ac faucibus eros. Nullam vitae augue a arcu mattis feugiat a ac leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc felis tellus, efficitur ut nibh et, fermentum condimentum mauris.</p>
-
-    <p>Duis tincidunt lacus in varius laoreet. Proin ac diam arcu. Fusce lectus diam, sagittis mollis enim sed, bibendum faucibus enim. Nullam blandit erat et purus pellentesque consectetur. Sed interdum mauris diam, non posuere dolor lacinia non. Fusce pellentesque suscipit ex commodo laoreet. Ut quam mi, maximus sit amet tempus sed, vestibulum vitae magna. Sed mattis euismod pretium. Nunc efficitur, dui eget tincidunt blandit, nibh justo egestas mauris, ut varius metus magna vitae dui. Quisque suscipit turpis felis, id tincidunt quam dapibus non. Proin id ipsum gravida, feugiat leo non, maximus est. Mauris leo turpis, finibus sed efficitur a, egestas vel nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </container>
+      <article id="contact">
+        <div class="container">
+          <h1>Contact</h1>
+          <p>...</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">See my work</a></p>
+        </div>
+      </article>
     </section>
 
       <footer class="navbar navbar-bottom">
         <div class="container">
-          <p class="navbar-text pull-left">©2016 Erik Jönsson
+          <p class="navbar-text pull-left">&copy;<script>document.write(new Date().getFullYear())</script> Erik Jönsson
           </p>
           <a href="https://github.com/erikwithuhk" class="pull-right" id="github">
             <span class="fa-stack fa-2x">
@@ -96,6 +137,8 @@
 Scripts
 =======================-->
 <script src="https://use.fontawesome.com/38221984a4.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 
 <!--=======================
