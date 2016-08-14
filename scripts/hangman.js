@@ -70,16 +70,21 @@ var drawHangman = function() {
 };
 
 var hasLetter = function(array, guessedLetter) {
-	if(array.includes(guessedLetter)) {
-    if(countLetters(guessedLetter) > 1) {
-      $('.validation').html('There are ' + countLetters(guessedLetter) + ' ' + guessedLetter + 's.');
-    } else if(countLetters(guessedLetter) === 1) {
-  		$('.validation').html('There is one ' + guessedLetter + '.');
-    }
-	} else {
-    pushWrongLetter(guessedLetter);
-		$('.validation').html('Sorry, there are no ' + guessedLetter + 's.');
-	}
+  if (guessedLetters.includes(guessedLetter) || wrongLetters.includes(guessedLetter)) {
+    document.getElementById('validation').innerHTML = 'You\'ve already guessed that letter!';
+  } else {
+  	if(array.includes(guessedLetter)) {
+      if(countLetters(guessedLetter) > 1) {
+        $('#validation').html('There are ' + countLetters(guessedLetter) + ' ' + 
+          guessedLetter + 's.');
+      } else if(countLetters(guessedLetter) === 1) {
+    		$('#validation').html('There is one ' + guessedLetter + '.');
+      }
+  	} else {
+      pushWrongLetter(guessedLetter);
+  		$('#validation').html('Sorry, there are no ' + guessedLetter + 's.');
+  	}
+  }
 }
 
 var pushWrongLetter = function(letter) {
@@ -123,7 +128,7 @@ var reset = function() {
   }
   wrongLetters = [];
   wrongGuesses = 0;
-  $('.validation').html('');
+  $('#validation').html('');
   $('.word-to-guess').html(guessedLetters.join(' '));
   $('.wrong-letters').html('');
   $('.wrong-guesses').html('');
