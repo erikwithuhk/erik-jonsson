@@ -99,14 +99,14 @@ var over = function() {
     $('.prompt').hide();
     $('input').hide();
     $('.guess').hide();
-		$('.win').html('Congratulations, you won!');
+		$('#win').html('Congratulations, you won!');
     $('.reset').html('Play again');
 		return true;
   } else if (wrongGuesses === 9) {
     $('.prompt').hide();
     $('input').hide();
     $('.guess').hide();
-    $('.win').html('You lost, try again!');
+    $('#win').html('You lost, try again!');
     $('.reset').html('Play again');
     return true;
 	} else {
@@ -132,7 +132,7 @@ var reset = function() {
   $('.word-to-guess').html(guessedLetters.join(' '));
   $('.wrong-letters').html('');
   $('.wrong-guesses').html('');
-  $('.win').html('');
+  $('#win').html('');
   $('.prompt').show();
   $('input').show();
   $('.guess').show();
